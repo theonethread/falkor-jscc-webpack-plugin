@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": false,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "declaration": true,
+    "lib": ["ESNext"]
+  },
+  "include": ["src"]
+}
