@@ -10,7 +10,7 @@
     "target": "es6",
     "module": "commonjs",
     "sourceMap": false,
-    "outDir": "dist",
+    "outDir": ".dist",
     "moduleResolution": "node",
     "declaration": true,
     "lib": ["ESNext"]
