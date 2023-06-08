@@ -38,9 +38,13 @@
     "linux",
     "win32"
   ],
+  "type": "module",
   "main": ".dist/JsccPlugin.js",
+  "shared": [
+    ".dist/loader.js"
+  ],
   "module": ".dist/JsccPlugin.js",
-  "types": ".dist/JsccPlugin.d.ts",
+  "typings": ".dist/JsccPlugin.d.ts",
   "engines": {
     "node": ">=18",
     "npm": ">=8"
@@ -50,8 +54,8 @@
     ".dist"
   ],
   "scripts": {
-    "debug": "rimraf .dist && tsc",
-    "release": "rimraf .dist && tsc",
+    "debug": "rimraf .dist && falkor-bundler --debug --input src/JsccPlugin.ts && falkor-bundler --debug --input src/loader.ts",
+    "release": "rimraf .dist && falkor-bundler --release --input src/JsccPlugin.ts && falkor-bundler --release --input src/loader.ts",
     "lint": "prettier --check . && cspell lint --no-progress --wordsOnly --unique --gitignore --exclude .git ** .*",
     "prepublishOnly": "npm install --ignore-scripts --fund false && npm run lint && npm run release"
   },
@@ -61,7 +65,7 @@
   "devDependencies": {
     "rimraf": "5.0.1",
     "typescript": "5.1.3",
-    "webpack": "5.85.1",
+    "webpack": "5.86.0",
     "@falkor/falkor-bundler": "1.2.3"
   }
 }
