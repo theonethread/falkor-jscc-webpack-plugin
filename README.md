@@ -1,6 +1,5 @@
 # Falkor JSCC Webpack Plugin
 
-
 `// TODO`
 
 ## **Further Development**
